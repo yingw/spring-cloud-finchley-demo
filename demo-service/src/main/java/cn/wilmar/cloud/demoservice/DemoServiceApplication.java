@@ -25,7 +25,7 @@ class HelloService {
     String port;
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
-    public String helloService(@RequestParam(value = "name", defaultValue = "") String name) {
-        return "Hello, Im " + name + ", and I come from " + port;
+    public String helloService(@RequestParam(value = "name", defaultValue = "John Doe") String name) {
+        return "Hello, I'm " + name + ", and I came from " + port;
     }
 }
